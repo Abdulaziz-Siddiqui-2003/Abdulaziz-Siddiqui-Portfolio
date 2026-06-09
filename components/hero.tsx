@@ -19,7 +19,7 @@ export function Hero() {
   return (
     <section
       id="top"
-      className="relative flex min-h-screen items-center overflow-hidden px-6 pt-24"
+      className="relative flex min-h-screen items-center overflow-hidden px-4 pt-16 sm:px-6 sm:pt-24"
     >
       {/* ambient glow */}
       <div
@@ -43,28 +43,28 @@ export function Hero() {
         >
           Hi, my name is
         </motion.p>
-        <div className="text-balance text-5xl font-bold tracking-tight text-foreground sm:text-6xl lg:text-7xl">
+        <div className="text-balance text-3xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-7xl">
           <AnimatedText text={profile.name} delay={0.3} staggerChildren={0.04} />
           <AnimatedText text="." delay={0.6} staggerChildren={0} />
         </div>
-        <div className="mt-3 text-balance text-3xl font-bold tracking-tight text-muted-foreground sm:text-5xl lg:text-6xl">
+        <div className="mt-3 text-balance text-xl font-bold tracking-tight text-muted-foreground sm:text-3xl lg:text-6xl">
           <AnimatedText text={profile.role} delay={0.5} staggerChildren={0.03} />
           <AnimatedText text="." delay={1} staggerChildren={0} />
         </div>
         <motion.p
           variants={item}
-          className="mt-6 max-w-xl text-pretty text-base leading-relaxed text-muted-foreground sm:text-lg"
+          className="mt-6 max-w-xl text-pretty text-sm leading-relaxed text-muted-foreground sm:text-base lg:text-lg"
         >
           {profile.tagline}
         </motion.p>
 
         <motion.div
           variants={item}
-          className="mt-8 flex flex-wrap items-center gap-4"
+          className="mt-8 flex flex-col gap-3 sm:flex-row sm:gap-4"
         >
           <a
             href="#projects"
-            className="rounded-md bg-primary px-6 py-3 font-mono text-sm font-medium text-primary-foreground transition-transform hover:-translate-y-0.5"
+            className="rounded-md bg-primary px-5 py-2.5 font-mono text-xs font-medium text-primary-foreground transition-transform hover:-translate-y-0.5 sm:px-6 sm:py-3 sm:text-sm"
           >
             View my work
           </a>
@@ -72,7 +72,7 @@ export function Hero() {
             href={profile.github}
             target="_blank"
             rel="noreferrer"
-            className="flex items-center gap-2 rounded-md border border-border px-6 py-3 font-mono text-sm text-foreground transition-colors hover:border-primary hover:text-primary"
+            className="flex items-center justify-center gap-2 rounded-md border border-border px-5 py-2.5 font-mono text-xs text-foreground transition-colors hover:border-primary hover:text-primary sm:px-6 sm:py-3 sm:text-sm"
           >
             <GithubIcon className="size-4" />
             GitHub
@@ -81,7 +81,7 @@ export function Hero() {
 
         <motion.div
           variants={item}
-          className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-muted-foreground"
+          className="mt-10 flex flex-col gap-3 text-xs text-muted-foreground sm:flex-wrap sm:flex-row sm:gap-x-6 sm:gap-y-3 sm:text-sm"
         >
           <span className="flex items-center gap-2">
             <MapPin className="size-4 text-primary" />
@@ -103,7 +103,7 @@ export function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.2 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-muted-foreground"
+        className="absolute bottom-4 left-1/2 -translate-x-1/2 text-muted-foreground sm:bottom-8"
       >
         <motion.span
           animate={{ y: [0, 8, 0] }}
