@@ -12,6 +12,7 @@ export const profile = {
   email: 'abdulazizsiddiqui3456@gmail.com',
   phone: '+92 308 5841484',
   github: 'https://github.com/Abdulaziz-Siddiqui-2003',
+  linkedin: 'https://www.linkedin.com/in/abdulaziz-siddiqui-7a6768346',
 }
 
 export const skillGroups: { title: string; skills: string[] }[] = [

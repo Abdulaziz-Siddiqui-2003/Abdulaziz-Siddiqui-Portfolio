@@ -1,5 +1,5 @@
 import { Reveal } from '@/components/reveal'
-import { GithubIcon } from '@/components/icons'
+import { GithubIcon, LinkedInIcon } from '@/components/icons'
 import { profile } from '@/lib/portfolio-data'
 import { Mail, MapPin, Phone } from 'lucide-react'
 
@@ -51,15 +51,26 @@ export function Contact() {
       </Reveal>
 
       <footer className="mt-20 border-t border-border pt-8">
-        <a
-          href={profile.github}
-          target="_blank"
-          rel="noreferrer"
-          className="mx-auto flex w-fit items-center gap-2 text-muted-foreground transition-colors hover:text-primary"
-        >
-          <GithubIcon className="size-5" />
-          <span className="text-sm">GitHub</span>
-        </a>
+        <div className="flex justify-center gap-6">
+          <a
+            href={profile.github}
+            target="_blank"
+            rel="noreferrer"
+            className="flex items-center gap-2 text-muted-foreground transition-colors hover:text-primary"
+          >
+            <GithubIcon className="size-5" />
+            <span className="text-sm">GitHub</span>
+          </a>
+          <a
+            href={profile.linkedin}
+            target="_blank"
+            rel="noreferrer"
+            className="flex items-center gap-2 text-muted-foreground transition-colors hover:text-primary"
+          >
+            <LinkedInIcon className="size-5" />
+            <span className="text-sm">LinkedIn</span>
+          </a>
+        </div>
         <p className="mt-4 font-mono text-xs text-muted-foreground">
           Designed &amp; built by {profile.name}
         </p>
